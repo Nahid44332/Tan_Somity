@@ -5,19 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Member extends Model
+class Collection extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'name',
-        'phone',
-        'status',
+        'member_id',
+        'collection_date',
+        'amount',
+        'is_paid',
     ];
-
-public function lotteries()
-{
-    return $this->hasMany(Lottery::class);
-}
-
 }
